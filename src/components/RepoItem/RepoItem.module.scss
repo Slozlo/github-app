@@ -1,0 +1,23 @@
+.paper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+}
+
+.icon {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.field {
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.label {
+  font-weight: 600;
+}

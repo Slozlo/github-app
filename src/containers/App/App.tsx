@@ -1,14 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from '../../store/store';
+
+import Header from '../Header';
+import ReposList from '../ReposList';
+
+import styles from './App.module.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>hello world</h1>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className={styles.app}>
+        <Header />
+        <ReposList />
+      </div>
+    </Provider>
   );
 }
 
