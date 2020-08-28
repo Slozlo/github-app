@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 import { RepoItem, Loader } from '../../components';
 
 import styles from './ReposList.module.scss';
+import { RootState } from '../../types/rootState';
 
 export default () => {
-  const repos = useSelector((state: any) => state.repos.data);
-  const isReposLoading = useSelector((state: any) => state.repos.loading);
+  const repos = useSelector((state: RootState) => state.repos.data);
+  const isReposLoading = useSelector((state: RootState) => state.repos.loading);
 
   return (
     <div>
@@ -15,7 +16,7 @@ export default () => {
         <Loader />
       ) : (
         <div className={styles['list-wrapper']}>
-          {repos.map((repo: any) => (
+          {repos.map((repo) => (
             <RepoItem
               forksCount={repo.forks_count}
               watchersCount={repo.watchers_count}

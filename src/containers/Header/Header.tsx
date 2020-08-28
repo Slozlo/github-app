@@ -6,11 +6,12 @@ import useDebounce from '../../hooks/useDebounce';
 import TextField from '@material-ui/core/TextField';
 
 import styles from './Header.module.scss';
+import { RootState } from '../../types/rootState';
 
 export default () => {
   const dispatch = useDispatch();
 
-  const error = useSelector((state: any) => state.repos.error);
+  const error = useSelector((state: RootState) => state.repos.error);
 
   const [orgLogin, setSearchLogin] = useState('');
 

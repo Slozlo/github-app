@@ -5,6 +5,7 @@ import {
   FETCH_REPOS_SUCCESS,
   FETCH_REPOS_FAIL
 } from './reposConstants';
+import { Repo } from '../../../types/repo';
 
 export const {
   fetchReposRequest,
@@ -14,7 +15,7 @@ export const {
   [FETCH_REPOS_REQUEST]: (orgLogin: string) => ({
     orgLogin
   }),
-  [FETCH_REPOS_SUCCESS]: (repos: any[]) => ({
+  [FETCH_REPOS_SUCCESS]: (repos: Repo[]) => ({
     data: repos
   }),
   [FETCH_REPOS_FAIL]: (error: string) => ({ error })
